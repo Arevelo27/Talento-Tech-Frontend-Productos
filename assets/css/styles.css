@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f8f9fa;
+    padding-top: calc(3rem + 4.5rem);
+}
+
+main {
+    background-color: white;
+    color: black;
+}
+
+header {
+    position: fixed;
+    /* Mantener el header fijo */
+    top: 0;
+    /* Alinear en la parte superior */
+    left: 0;
+    right: 0;
+    background-color: #343a40;
+    /* Color de fondo */
+    color: #ffffff;
+    /* Color del texto */
+    padding: 20px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centrar el texto */
+    z-index: 1000;
+    /* Asegurarse de que esté encima de otros elementos */
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+form {
+    width: 450px;
+}
+
+#card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.card img {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+}
+
+#btn-flotante {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    border-radius: 100%;
+}
+
+#btn-flotante:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative; /* Para que el botón flotante no se desplace más allá */
+}
